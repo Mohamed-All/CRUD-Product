@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./project.css">
+    <title>project</title>
+</head>
+<body>
+    <div class="crud">
+        <div class="head">
+            <h2>Crud</h2>
+            <p>Product managment system</p>
+        </div>
+        <div class="inputs">
+                <input placeholder="title" id="title" type="text">
+                <div class="price">
+                    <input onkeyup="getTotal()" type="number" placeholder="price" id="price">
+                    <input onkeyup="getTotal()" type="number" placeholder="taxes" id="taxes">
+                    <input onkeyup="getTotal()" type="number" placeholder="ads" id="ads">
+                    <input onkeyup="getTotal()" type="number" placeholder="discount" id="discount">
+                    <small id="total"></small>
+                </div>
+                <input placeholder="count" id="count" type="number">
+                <input placeholder="category" id="category" type="text">
+                <button id="submit">Create</button>
+        </div>
+        <div class="outputs">
+            <div class="searchBlock">
+                <input type="text" onkeyup="searchData(this.value)" value="" id="search" placeholder="search">
+                <div class="btnSearch">
+                    <button onclick="getSearchMood (this.id)" id="searchTitle">search by Title</button>
+                    <button onclick="getSearchMood (this.id)" id="searchCategory">search by Category</button>
+                </div>
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+            <tbody id="table">
+                <!-- <tr>
+                    <td>001</td>
+                    <td>samsung</td>
+                    <td>2000</td>
+                    <td>10</td>
+                    <td>5</td>
+                    <td>50</td>
+                    <th>$$$</th>
+                    <td>phone</td>
+                    <td><button id="update">update</button></td>
+                    <td><button id="delete">delete</button></td>
+                </tr> -->
+
+
+            </table>
+        </div>
+    </div>
+    <script src="./project.js"></script> 
+</body>
+</html>
